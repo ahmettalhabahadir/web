@@ -29,10 +29,13 @@
             <a class="nav-link" aria-current="page" href="sehrim.html">Şehrim</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="ozgecmis.html">Özgeçmiş</a>
+            <a class="nav-link" aria-current="page" href="mirasimiz.html">Mirasımız</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="mirasimiz.html">Mirasımız</a>
+            <a class="nav-link" aria-current="page" href="ilgialanlarim.html">İlgi Alanlarım</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="ozgecmis.html">Özgeçmiş</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="iletisim.html">İletişim</a>
@@ -93,51 +96,56 @@
       </form>
     </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-  <script>
-      new Vue({
-          el: '#app',
-          data: {
-              ad: '',
-              soyad: '',
-              email: '',
-              telefon: '',
-              mesaj: '',
-              dogumTarihi: '',
-              cinsiyet: '',
-              sehir: '',
-              dosya: ''
-          },
-          methods: {
-              submitForm: function() {
-                  // Formu göndermek için burada bir API isteği yapılabilir
-                  console.log('Form gönderildi!');
-                  console.log('Ad:', this.ad);
-                  console.log('Soyad:', this.soyad);
-                  console.log('E-posta:', this.email);
-                  console.log('Telefon:', this.telefon);
-                  console.log('Mesaj:', this.mesaj);
-                  console.log('Doğum Tarihi:', this.dogumTarihi);
-                  console.log('Cinsiyet:', this.cinsiyet);
-                  console.log('Şehir:', this.sehir);
-                  console.log('Dosya:', this.dosya);
-                  this.resetForm();
-              },
-              resetForm: function() {
-                  // Formu sıfırla
-                  this.ad = '';
-                  this.soyad = '';
-                  this.email = '';
-                  this.telefon = '';
-                  this.mesaj = '';
-                  this.dogumTarihi = '';
-                  this.cinsiyet = '';
-                  this.sehir = '';
-                  this.dosya = '';
-              }
-          }
-      });
-  </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                ad: '',
+                soyad: '',
+                email: '',
+                telefon: '',
+                mesaj: '',
+                dogumTarihi: '',
+                cinsiyet: '',
+                sehir: '',
+                dosya: ''
+            },
+            methods: {
+                submitForm: function() {
+                    var formData = {
+                        ad: this.ad,
+                        soyad: this.soyad,
+                        email: this.email,
+                        telefon: this.telefon,
+                        mesaj: this.mesaj,
+                        dogumTarihi: this.dogumTarihi,
+                        cinsiyet: this.cinsiyet,
+                        sehir: this.sehir,
+                        dosya: this.dosya
+                    };
+    
+                    localStorage.setItem('formData', JSON.stringify(formData));
+    
+                    console.log('Form gönderildi ve bilgiler localStorage\'a kaydedildi.');
+    
+                    this.resetForm();
+                },
+                resetForm: function() {
+                    this.ad = '';
+                    this.soyad = '';
+                    this.email = '';
+                    this.telefon = '';
+                    this.mesaj = '';
+                    this.dogumTarihi = '';
+                    this.cinsiyet = '';
+                    this.sehir = '';
+                    this.dosya = '';
+                }
+            }
+        });
+    </script>
+    
 
 
 

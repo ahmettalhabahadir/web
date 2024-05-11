@@ -31,11 +31,16 @@ li a:hover {
 
 
 #balikesir-text {
-    color: black;
+    color: whitesmoke;
     text-align: center;
     font-family: Georgia, 'Times New Roman';
     font-size: 120px;
     font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    margin-left: 400px;
+    margin-right: 400px;
+    border-radius: 20px;
 }
 
 #balikesir-tanitim {

@@ -1,0 +1,38 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+    
+li {
+    float: left;
+}
+    
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+    
+li a:hover {
+    background-color: green;
+}
+    
+    
+.carousel {
+    max-width: 50%;
+    margin: 10px auto; 
+    border: 3px solid white;
+
+}
+
+.card {
+    border-radius: 25px; /* Kartın kenar yuvarlaklığı */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Kartın gölgesi */
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 20px;
+}

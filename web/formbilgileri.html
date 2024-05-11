@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Bilgileri</title>
+</head>
+<body>
+    <h1>Form Bilgileri</h1>
+    <div id="formDataContainer"></div>
+
+    <script>
+        // Sayfa yüklendiğinde localStorage'dan formData'yı al
+        let formData = JSON.parse(localStorage.getItem('formData')) || {};
+
+        // Yeni form gönderildiğinde bu fonksiyon çağrılır
+        function submitForm() {
+            const newFormData = {
+                ad: document.getElementById('ad').value,
+                soyad: document.getElementById('soyad').value,
+                email: document.getElementById('email').value,
+                telefon: document.getElementById('telefon').value,
+                mesaj: document.getElementById('mesaj').value,
+                dogumTarihi: document.getElementById('dogumtarihi').value,
+                cinsiyet: document.querySelector('input[name="cinsiyet"]:checked').value,
+                sehir: document.getElementById('sehir').value,
+                // Diğer form alanlarını buraya ekleyin
+            };
+
+            // Yeni form bilgilerini eski form bilgilerine ekle
+            formData = { ...formData, ...newFormData };
+
+            // formData'yı localStorage'a kaydet
+            localStorage.setItem('formData', JSON.stringify(formData));
+
+            // formData'nın içeriğini HTML olarak biçimlendir
+            let formDataHTML = '';
+            for (const key in formData) {
+                formDataHTML += `<p><strong>${key}:</strong> ${formData[key]}</p>`;
+            }
+
+            // formData'yı sayfada görüntüle
+            const formDataContainer = document.getElementById('formDataContainer');
+            formDataContainer.innerHTML = formDataHTML;
+        }
+
+        // Form gönderme işlemi
+        document.addEventListener('DOMContentLoaded', () => {
+            // Sayfa yüklendiğinde mevcut formData'yı görüntüle
+            const formDataContainer = document.getElementById('formDataContainer');
+            let formDataHTML = '';
+            for (const key in formData) {
+                formDataHTML += `<p><strong>${key}:</strong> ${formData[key]}</p>`;
+            }
+            formDataContainer.innerHTML = formDataHTML;
+
+            // Form gönderme işlemi
+            document.getElementById('submitBtn').addEventListener('click', submitForm);
+        });
+    </script>
+</body>
+</html>

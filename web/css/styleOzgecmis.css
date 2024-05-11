@@ -1,0 +1,74 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+  
+header {
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main{
+    background:transparent;
+    backdrop-filter: blur(10px);
+    margin-left: 500px;
+    margin-right: 500px;
+}
+footer {
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    text-align: center;
+}
+
+/* Eğitim bilgileri stil */
+#education {
+    background-color: rgba(0,0,0,0.2);
+    padding: 20px;
+    text-align: center;
+}
+
+#education h2 {
+    margin-bottom: 20px;
+}
+
+#education article {
+    margin-bottom: 20px;
+}
+
+#education article h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#education article p {
+    margin: 0;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+    
+li {
+    float: left;
+}
+    
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+    
+li a:hover {
+    background-color: green;
+}
+
