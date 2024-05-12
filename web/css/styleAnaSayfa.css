@@ -3,18 +3,18 @@
     margin-top: 20px; /* Üst kenara 20 piksel boşluk ekler */
 }
 
-ul {
+.navbar-nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
 
-li {
+.navbar-nav .nav-item {
     float: left;
 }
 
-li a {
+.navbar-nav .nav-item a {
     display: block;
     color: white;
     text-align: center;
@@ -22,8 +22,12 @@ li a {
     text-decoration: none;
 }
 
-li a:hover {
-    background-color: green;
+.navbar-nav .nav-item a:hover {
+    background-color: #03f40f;
+    color: black;
+    box-shadow: 0 0 5px #03f40f,
+                0 0 25px #03f40f,
+                0 0 50px #03f40f,
+                0 0 100px #03f40f;
 }
-
 

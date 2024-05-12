@@ -1,26 +1,30 @@
-ul {
+.navbar-nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
-    
-li {
+
+.navbar-nav .nav-item {
     float: left;
 }
-    
-li a {
+
+.navbar-nav .nav-item a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
-    
-li a:hover {
-    background-color: green;
+
+.navbar-nav .nav-item a:hover {
+    background-color: #03f40f;
+    color: black;
+    box-shadow: 0 0 5px #03f40f,
+                0 0 25px #03f40f,
+                0 0 50px #03f40f,
+                0 0 100px #03f40f;
 }
-    
     
 .carousel {
     max-width: 50%;
@@ -29,19 +33,21 @@ li a:hover {
 
 }
 
-
 #balikesir-text {
-    color: whitesmoke;
-    text-align: center;
-    font-family: Georgia, 'Times New Roman';
-    font-size: 120px;
-    font-weight: bold;
-    background-color: rgba(0, 0, 0, 0.2);
-    margin-top: 10px;
-    margin-left: 400px;
-    margin-right: 400px;
-    border-radius: 20px;
+    font-family: monospace;
+    font-size: 100px;
+    margin-left: 500px;
+    background: linear-gradient(to left, #2980b9, #2ecc71, #f1c40f, #e67e22, #e74c3c);
+    background-clip: text; /* background-clip değeri değiştirildi */
+    display: inline-block; /* inline-block olarak değiştirildi */
+    color: transparent;
+    animation: animated 3s linear infinite;
 }
+
+@keyframes animated {
+    to { background-position-x: 500px; }
+}
+
 
 #balikesir-tanitim {
     margin: 20px;
@@ -54,26 +60,66 @@ li a:hover {
     border-radius: 20px;
 }
 
-.card {
-    border-radius: 25px; /* Kartın kenar yuvarlaklığı */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Kartın gölgesi */
-    margin-left: 20px;
-    margin-right: 20px;
-}
-  
-.card-title {
-    font-family: Arial, sans-serif; /* Kart başlığı için font ailesi */
-    font-size: 1.25rem; /* Kart başlığı font büyüklüğü */
-    font-weight: bold; /* Kart başlığı font kalınlığı */
-}
-
-.card-text {
-    font-family: Arial, sans-serif; /* Kart metni için font ailesi */
-    font-size: 1rem; /* Kart metni font büyüklüğü */
-}
   
 .back-button {
     position: absolute;
     top: 5px;
     left: 5px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 600px;
+    height: 400px;
+    perspective: 1000px;     
+    font-family: sans-serif;
+    margin: 0 auto;
+}
+  
+.title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+}
+  
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+} 
+  
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+  
+.flip-card-front, .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    border-radius: 1rem;
+}
+  
+
+.flip-card-back {
+    background: linear-gradient(120deg, #a0d8ef 30%, #e0f3f9 88%, #7acbe3 40%, #bee5eb 78%);
+    color: #333; /* Metin rengi */
+    transform: rotateY(180deg);
+}
+
+
+
+
+.text{
+    font-size: 1rem;
 }

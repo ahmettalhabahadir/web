@@ -1,36 +1,81 @@
-ul {
+.navbar-nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
-    
-li {
+
+.navbar-nav .nav-item {
     float: left;
 }
-    
-li a {
+
+.navbar-nav .nav-item a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
-    
-li a:hover {
-    background-color: green;
+
+.navbar-nav .nav-item a:hover {
+    background-color: #03f40f;
+    color: black;
+    box-shadow: 0 0 5px #03f40f,
+                0 0 25px #03f40f,
+                0 0 50px #03f40f,
+                0 0 100px #03f40f;
+}
+
+ul.list {
+    list-style-type: none; /* Liste marker'ını kaldır */
 }
 
 
-h1 {
-    font-size: 2rem;
+
+.container {
     text-align: center;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 25px;
+    font-family:monospace;
 }
+
+#topTracksList {
+    display: table; /* Liste öğelerini tablo gibi göster */
+    width: 100%; /* Tam genişlik */
+    border-collapse: collapse; /* Kenarlık çizgilerini birleştir */
+}
+
+#topTracksList li {
+    display: table-row; /* Liste öğelerini tablo satırı gibi göster */
+}
+
+#topTracksList li div {
+    display: table-cell; /* Div öğelerini tablo hücresi gibi göster */
+    padding: 8px; /* İç boşluk */
+    border-bottom: 1px solid #ddd; /* Alt kenarlık */
+}
+
+#topTracksList li div:first-child {
+    font-weight: bold; /* İlk hücrenin metnini kalın yap */
+    width: 70%; /* İlk hücrenin genişliği */
+}
+
+#topTracksList li div:last-child {
+    width: 30%; /* İkinci hücrenin genişliği */
+}
+
 
 footer {
     background-color: rgba(0,0,0,0.5);
     color: white;
     padding: 20px;  
     text-align: center;
-    
+    margin-top: 50px;
 }
+
+iframe {
+    margin: auto;
+    display: block;
+}
+
+

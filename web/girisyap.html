@@ -15,23 +15,24 @@
       </style>
 </head>
 <body>
-  <a href="proje.html" class="back-button btn btn-light">Geri Dön</a>
+  <a href="proje.html" class="back-button btn btn-dark">Geri Dön</a>
+ 
+    <div class="login-box">
+      <form action="kaydet.php" method="POST">
+        <div class="user-box">
+          <input type="email" class="form-control" name="kullaniciAdi" required>
+          <label>Kullanıcı Adı</label>
+        </div>
+        <div class="user-box">
+          <input type="password" class="form-control" name="sifre" required>
+          <label>Şifre</label>
+        </div>
+        <center><button type="submit" class="button">Giriş Yap<span></span></button></center>
+      </form>
+    </div>
 
-  <div class="wrapper">
-    <form action="php/kaydet.php" method="POST">
-      <h1>Giriş Yap</h1>
-      <div class ="input-box">
-          <input type="email" class="form-control" placeholder="Kullanıcı Adı" name="kullaniciAdi" required>
-      </div>
-      <div class ="input-box">
-        <input type="password" class="form-control" placeholder="Şifre" name="sifre" required>
-      </div>
-      <button type="submit" class="button">Giriş Yap</button>
-    </form>
-    
 
 
-  </div>
  
       
 
