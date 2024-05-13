@@ -1,3 +1,8 @@
+.custom-card {
+    margin: 0 auto
+  
+}
+
 .navbar-nav {
     list-style-type: none;
     margin: 0;
@@ -16,6 +21,7 @@
     padding: 14px 16px;
     text-decoration: none;
 }
+
 .navbar-nav .nav-item a:hover {
     background-color: #03f40f;
     color: black;
@@ -24,19 +30,4 @@
                 0 0 50px #03f40f,
                 0 0 100px #03f40f;
 }
-    
-    
-.carousel {
-    max-width: 50%;
-    margin: 0 auto; 
-    border: 3px solid white;
 
-}
-
-.card {
-    border-radius: 25px; /* Kartın kenar yuvarlaklığı */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Kartın gölgesi */
-    margin: 2%;
-    margin-right: 2%;
-    margin-left: 2%;
-}

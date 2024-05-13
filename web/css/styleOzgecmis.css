@@ -15,8 +15,8 @@ header {
 main{
     background:transparent;
     backdrop-filter: blur(10px);
-    margin-left: 500px;
-    margin-right: 500px;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 footer {
     background-color: rgba(0,0,0,0.5);

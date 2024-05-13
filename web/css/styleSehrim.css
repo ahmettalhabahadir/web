@@ -33,20 +33,27 @@
 
 }
 
-#balikesir-text {
-    font-family: monospace;
-    font-size: 100px;
-    margin-left: 500px;
-    background: linear-gradient(to left, #2980b9, #2ecc71, #f1c40f, #e67e22, #e74c3c);
-    background-clip: text; /* background-clip değeri değiştirildi */
-    display: inline-block; /* inline-block olarak değiştirildi */
-    color: transparent;
-    animation: animated 3s linear infinite;
+
+.balikesir-text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 0 auto;
 }
 
-@keyframes animated {
-    to { background-position-x: 500px; }
+.balikesir-text h1 {
+    font-size: 80px;
+    color: black;
+    position: relative;
 }
+
+.balikesir-text h1::before {
+    content: attr(data-text);
+    position: absolute;
+    color: #fff;
+    filter: blur(15px);
+    mix-blend-mode: screen;
+}
+
 
 
 #balikesir-tanitim {
