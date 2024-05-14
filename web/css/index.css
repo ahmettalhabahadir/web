@@ -44,6 +44,7 @@ h2 {
 }
 
 .button {
+    text-decoration: none;
     position: absolute;
     top: 60%; /* Yazıdan biraz daha aşağıda olması için */
     left: 50%;

@@ -3,6 +3,9 @@ body {
     background-color: #f2f2f2;
     margin: 0;
     padding: 0;
+    background-image: url('img/wallpaper.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #app {
