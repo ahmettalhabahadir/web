@@ -2,6 +2,7 @@ body {
     background-image: url('img/wallpaper.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    
 }
 
 .navbar-nav {
@@ -31,57 +32,7 @@ body {
                 0 0 50px #03f40f,
                 0 0 100px #03f40f;
 }
+    
 
-ul.list {
-    list-style-type: none; /* Liste marker'ını kaldır */
-}
-
-
-
-.container {
-    text-align: center;
-    background-color: rgba(0,0,0,0.2);
-    border-radius: 25px;
-    font-family:monospace;
-}
-
-#topTracksList {
-    display: table; /* Liste öğelerini tablo gibi göster */
-    width: 100%; /* Tam genişlik */
-    border-collapse: collapse; /* Kenarlık çizgilerini birleştir */
-}
-
-#topTracksList li {
-    display: table-row; /* Liste öğelerini tablo satırı gibi göster */
-}
-
-#topTracksList li div {
-    display: table-cell; /* Div öğelerini tablo hücresi gibi göster */
-    padding: 8px; /* İç boşluk */
-    border-bottom: 1px solid #ddd; /* Alt kenarlık */
-}
-
-#topTracksList li div:first-child {
-    font-weight: bold; /* İlk hücrenin metnini kalın yap */
-    width: 70%; /* İlk hücrenin genişliği */
-}
-
-#topTracksList li div:last-child {
-    width: 30%; /* İkinci hücrenin genişliği */
-}
-
-
-footer {
-    background-color: rgba(0,0,0,0.5);
-    color: white;
-    padding: 20px;  
-    text-align: center;
-    margin-top: 50px;
-}
-
-iframe {
-    margin: auto;
-    display: block;
-}
 
 
