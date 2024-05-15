@@ -1,0 +1,38 @@
+body {
+    background-image: url('img/wallpaper.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.navbar-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbar-nav .nav-item {
+    float: left;
+}
+
+.navbar-nav .nav-item a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar-nav .nav-item a:hover {
+    background-color: #03f40f;
+    color: black;
+    box-shadow: 0 0 5px #03f40f,
+                0 0 25px #03f40f,
+                0 0 50px #03f40f,
+                0 0 100px #03f40f;
+}
+    
+
+
+
